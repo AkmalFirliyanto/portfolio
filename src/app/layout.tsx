@@ -23,13 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-black text-white min-h-screen relative`}>
-        <style jsx global>{`
-          .gradient-text {
-            font-family: ${bebasNeue.style.fontFamily};
-          }
-        `}</style>
+        <div className={`gradient-text-container ${bebasNeue.className}`}>
+          {children}
+        </div>
         <CursorLight />
-        {children}
       </body>
     </html>
   )

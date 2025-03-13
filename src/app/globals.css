@@ -94,7 +94,7 @@ body {
 }
 
 .animate-blink {
-  animation: blink 1s infinite;
+  animation: blink 1s step-end infinite;
 }
 
 /* Hapus semua CSS di bawah ini */
@@ -152,4 +152,8 @@ html {
 .hover-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(147, 51, 234, 0.2);
+}
+
+.gradient-text-container .gradient-text {
+  font-family: inherit;
 }
