@@ -1,3 +1,5 @@
+'use client';
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Bebas_Neue } from 'next/font/google'
@@ -22,10 +24,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <style dangerouslySetInnerHTML={{ __html: `
+          .gradient-text {
+            font-family: ${bebasNeue.style.fontFamily};
+          }
+        `}} />
+      </head>
       <body className={`${inter.className} bg-black text-white min-h-screen relative`}>
-        <div className={`gradient-text-container ${bebasNeue.className}`}>
-          {children}
-        </div>
+        {children}
         <CursorLight />
       </body>
     </html>
