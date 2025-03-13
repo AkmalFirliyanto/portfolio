@@ -52,7 +52,7 @@ function TypewriterWelcome() {
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [charIndex, messageIndex, isDeleting, typingSpeed]);
+  }, [charIndex, messageIndex, isDeleting]);
 
   return (
     <motion.p 
@@ -119,7 +119,7 @@ function ProfileSection() {
             </h2>
 
             <p className="text-gray-300 mb-12 leading-relaxed">
-              Hi! I&apos;m Akmal Firliyanto, a passionate student who loves to explore and create with technology. I enjoy building various projects like web applications, Discord bots, and automation tools to make life easier. I&apos;m particularly interested in integrating AI into my projects and constantly learning new technologies. While I&apos;m still a student, I&apos;m dedicated to turning my creative ideas into functional solutions.
+              Hi! I'm Akmal Firliyanto, a passionate student who loves to explore and create with technology. I enjoy building various projects like web applications, Discord bots, and automation tools to make life easier. I'm particularly interested in integrating AI into my projects and constantly learning new technologies. While I'm still a student, I'm dedicated to turning my creative ideas into functional solutions.
             </p>
 
             <motion.div

@@ -22,6 +22,7 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [volume, setVolume] = useState(0.15);
   const [showVolume, setShowVolume] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   // Inisialisasi audio
   useEffect(() => {
@@ -34,6 +35,7 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
         audio.preload = 'auto';
         
         // Set status awal
+        setIsInitialized(true);
         setIsMuted(withoutMusic);
         audio.muted = withoutMusic;
 
