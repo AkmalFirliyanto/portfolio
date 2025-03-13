@@ -1,9 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Bebas_Neue } from 'next/font/google'
 import CursorLight from '@/components/CursorLight'
 
 const inter = Inter({ subsets: ['latin'] })
+const bebasNeue = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Akmalfy',
@@ -17,10 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-      </head>
       <body className={`${inter.className} bg-black text-white min-h-screen relative`}>
+        <style jsx global>{`
+          .gradient-text {
+            font-family: ${bebasNeue.style.fontFamily};
+          }
+        `}</style>
         <CursorLight />
         {children}
       </body>
