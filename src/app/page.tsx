@@ -52,7 +52,7 @@ function TypewriterWelcome() {
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [charIndex, messageIndex, isDeleting]);
+  }, [charIndex, messageIndex, isDeleting, typingSpeed]);
 
   return (
     <motion.p 
@@ -119,7 +119,7 @@ function ProfileSection() {
             </h2>
 
             <p className="text-gray-300 mb-12 leading-relaxed">
-              Hi! I'm Akmal Firliyanto, a passionate student who loves to explore and create with technology. I enjoy building various projects like web applications, Discord bots, and automation tools to make life easier. I'm particularly interested in integrating AI into my projects and constantly learning new technologies. While I'm still a student, I'm dedicated to turning my creative ideas into functional solutions.
+              Hi! I&apos;m Akmal Firliyanto, a passionate student who loves to explore and create with technology. I enjoy building various projects like web applications, Discord bots, and automation tools to make life easier. I&apos;m particularly interested in integrating AI into my projects and constantly learning new technologies. While I&apos;m still a student, I&apos;m dedicated to turning my creative ideas into functional solutions.
             </p>
 
             <motion.div
@@ -385,7 +385,7 @@ function ContactSection() {
         style={{ opacity }}
       >
         <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
 
         <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
@@ -451,7 +451,7 @@ function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -466,8 +466,8 @@ function ScrollToTop() {
   }, []);
 
   const scrollToTop = () => {
-    const scrollDuration = Math.min(2.0, 1.0 + (window.pageYOffset / 10000)); // Durasi dinamis berdasarkan jarak scroll
-    const scrollHeight = window.pageYOffset;
+    const scrollDuration = Math.min(2.0, 1.0 + (window.scrollY / 10000)); // Durasi dinamis berdasarkan jarak scroll
+    const scrollHeight = window.scrollY;
     const frameRate = 1000 / 60;
     const totalFrames = scrollDuration * (1000 / frameRate);
     
@@ -629,7 +629,7 @@ export default function Home() {
                       <h1 
                         className="text-[150px] font-bold uppercase tracking-tighter gradient-text"
                         style={{ 
-                          fontFamily: "'Bebas Neue', sans-serif"
+                          fontFamily: "var(--font-bebas-neue)"
                         }}
                       >
                         Akmalfy

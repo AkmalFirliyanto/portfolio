@@ -1,9 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Bebas_Neue } from 'next/font/google'
 import CursorLight from '@/components/CursorLight'
 
 const inter = Inter({ subsets: ['latin'] })
+const bebasNeue = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-bebas-neue'
+})
 
 export const metadata: Metadata = {
   title: 'Akmalfy',
@@ -16,10 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`dark ${bebasNeue.variable}`}>
       <body className={`${inter.className} bg-black text-white min-h-screen relative`}>
         <CursorLight />
         {children}
