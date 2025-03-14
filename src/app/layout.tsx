@@ -23,6 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`dark ${bebasNeue.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
+      </head>
       <body className={`${inter.className} bg-black text-white min-h-screen relative`}>
         <CursorLight />
         {children}

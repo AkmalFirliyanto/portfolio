@@ -2,13 +2,17 @@
 
 import { motion } from 'framer-motion';
 
-const ScrollIndicator = () => {
+interface ScrollIndicatorProps {
+  className?: string;
+}
+
+const ScrollIndicator = ({ className = '' }: ScrollIndicatorProps) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1 }}
-      className="fixed left-8 top-1/2 -translate-y-1/2 flex items-center gap-4"
+      className={`fixed left-8 top-1/2 -translate-y-1/2 flex items-center gap-4 ${className}`}
     >
       {/* Teks Scroll Down dengan rotasi */}
       <motion.span

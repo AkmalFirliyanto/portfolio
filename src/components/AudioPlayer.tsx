@@ -182,16 +182,17 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
       </AnimatePresence>
 
       <div 
-        className="flex items-center gap-4"
+        className="flex items-center gap-4 relative"
         onMouseLeave={handleMouseLeave}
       >
         <AnimatePresence>
           {showVolume && (
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="volume-controls bg-gray-900/60 backdrop-blur-sm p-2 rounded-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="volume-controls bg-gray-900/60 backdrop-blur-sm p-2 rounded-lg absolute md:relative
+                        bottom-[calc(100%+0.5rem)] md:bottom-auto md:right-auto right-0 md:translate-y-0"
               onMouseEnter={() => setShowVolume(true)}
             >
               <input
@@ -201,7 +202,7 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
                 step="0.01"
                 value={volume}
                 onChange={handleVolumeChange}
-                className="w-20 h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                className="w-20 h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer md:rotate-0 rotate-0"
                 style={{
                   background: `linear-gradient(to right, #10B981 0%, #10B981 ${volume * 100}%, #374151 ${volume * 100}%, #374151 100%)`
                 }}

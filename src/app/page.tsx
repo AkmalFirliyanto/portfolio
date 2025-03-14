@@ -102,15 +102,15 @@ function ProfileSection() {
       >
         <div className="flex flex-col items-center gap-8">
           <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-purple-500/50 shadow-lg shadow-purple-500/30">
-            <Image
+        <Image
               src="/profile.jpg"
               alt="Profile"
               fill
               quality={95}
               sizes="(max-width: 768px) 100px, 160px"
               className="object-cover hover:scale-105 transition-transform duration-300"
-              priority
-            />
+          priority
+        />
           </div>
 
           <div className="text-center">
@@ -244,8 +244,8 @@ function ProjectSection() {
                 </div>
                 <a
                   href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   View Details
@@ -618,7 +618,7 @@ export default function Home() {
               />
             ) : (
               <>
-                <section className="min-h-screen w-full flex flex-col items-center justify-center p-24">
+                <section className="min-h-screen w-full flex flex-col items-center justify-center p-4 md:p-24">
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -627,7 +627,7 @@ export default function Home() {
                   >
                     <div className="relative">
                       <h1 
-                        className="text-[150px] font-bold uppercase tracking-tighter gradient-text"
+                        className="text-[150px] md:text-[150px] text-7xl font-bold uppercase tracking-tighter gradient-text px-4"
                         style={{ 
                           fontFamily: "var(--font-bebas-neue)"
                         }}
@@ -637,7 +637,7 @@ export default function Home() {
                     </div>
                     <TypewriterWelcome />
                   </motion.div>
-                  <ScrollIndicator />
+                  <ScrollIndicator className="hidden md:flex" />
                 </section>
 
                 <ProfileSection />
