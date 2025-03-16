@@ -627,7 +627,7 @@ export default function Home() {
                   >
                     <div className="relative">
                       <h1 
-                        className="text-[150px] md:text-[150px] text-7xl font-bold uppercase tracking-tighter gradient-text px-4"
+                        className="text-6xl sm:text-7xl md:text-[150px] font-bold uppercase tracking-tighter gradient-text px-4"
                         style={{ 
                           fontFamily: "var(--font-bebas-neue)"
                         }}

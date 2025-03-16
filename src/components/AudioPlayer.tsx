@@ -191,7 +191,7 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="volume-controls bg-gray-900/60 backdrop-blur-sm p-2 rounded-lg absolute md:relative
+              className="volume-controls bg-gray-900/60 backdrop-blur-sm p-1.5 sm:p-2 rounded-lg absolute md:relative
                         bottom-[calc(100%+0.5rem)] md:bottom-auto md:right-auto right-0 md:translate-y-0"
               onMouseEnter={() => setShowVolume(true)}
             >
@@ -202,7 +202,7 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
                 step="0.01"
                 value={volume}
                 onChange={handleVolumeChange}
-                className="w-20 h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer md:rotate-0 rotate-0"
+                className="w-16 sm:w-20 h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer md:rotate-0 rotate-0"
                 style={{
                   background: `linear-gradient(to right, #10B981 0%, #10B981 ${volume * 100}%, #374151 ${volume * 100}%, #374151 100%)`
                 }}
@@ -214,7 +214,7 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
         <motion.button
           onClick={toggleMute}
           onMouseEnter={handleMouseEnter}
-          className="music-button p-2 rounded-full bg-gray-900/60 backdrop-blur-sm hover:bg-gray-800/60 transition-all duration-300"
+          className="music-button p-1.5 sm:p-2 rounded-full bg-gray-900/60 backdrop-blur-sm hover:bg-gray-800/60 transition-all duration-300"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           animate={{
@@ -226,7 +226,7 @@ const AudioPlayer = forwardRef<AudioPlayerRef, AudioPlayerProps>(function AudioP
             repeatDelay: 2
           }}
         >
-          <span className="text-lg">
+          <span className="text-base sm:text-lg">
             {isMuted ? '🔇' : isPlaying ? '🔊' : '🎵'}
           </span>
         </motion.button>
