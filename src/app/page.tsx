@@ -131,7 +131,8 @@ function ProfileSection() {
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Things I Love to Work With</h3>
               <ul className="space-y-2">
                 <li>Web Development (HTML, CSS, JavaScript)</li>
-                <li>Manual Testing & Automation Testing</li>
+                <li>Software Testing (Manual Testing & Automation Testing)</li>
+                <li>Jira, Selenium</li>
                 <li>Discord.js Bot Development</li>
                 <li>Python</li>
                 <li>Firebase</li>
